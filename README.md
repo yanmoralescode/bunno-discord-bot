@@ -42,11 +42,37 @@ configuração do token por variável de ambiente.
    python main.py
    ```
 
-## Comandos de exemplo
+## Comandos e Uso
 
-- `!ajuda` — lista os comandos disponíveis.
-- `!cenoura` — exemplo de comando de texto.
-- `!temperatura` — outro exemplo de comando.
+- `!ajuda` — lista os comandos disponíveis e explica como falar com a IA.
+- `!cenoura` — resposta divertida sobre cenouras.
+- `!temperatura` — exemplo de resposta do coelho.
+- `!esquecer` (ou `!reset`, `!limpar`) — limpa a memória recente da conversa no canal.
+
+### 🐰 Conversar com a IA do Coelho
+
+Basta marcar o bot em qualquer mensagem ou responder a uma mensagem dele:
+
+```text
+@BunnoBot por que comemos cenoura?
+```
+
+O bot usa o **Ollama** localmente com o modelo `qwen2.5:3b` para responder com a personalidade caótica e divertida de um coelho!
+
+## Configuração da IA (Ollama)
+
+O bot utiliza o Ollama local (totalmente gratuito e privado).
+
+1. Certifique-se de que o Ollama está instalado e com o serviço ativo (`ollama serve`).
+2. Baixe o modelo configurado no `.env`:
+
+   ```bash
+   ollama pull qwen2.5:3b
+   ```
+
+3. No `.env`, você pode ajustar o modelo e endereço se necessário:
+   - `OLLAMA_BASE_URL=http://localhost:11434`
+   - `OLLAMA_MODEL=qwen2.5:3b`
 
 ## Segurança
 
